@@ -3,19 +3,16 @@ package people;
 public class Peoplе {
     private String namePeople;
     private double sumMoney;
-    private double sumCredit;
 
-    public Peoplе(String namePeople, double sumMoney, double sumCredit) {
+    public Peoplе(String namePeople, double sumMoney) {
         this.namePeople = namePeople;
         this.sumMoney = sumMoney;
-        this.sumCredit = sumCredit;
     }
 
     public Peoplе(String namePeople) {
 
         this.namePeople = namePeople;
         this.sumMoney = 0;
-        this.sumCredit = 0;
 
     }
 
@@ -27,10 +24,6 @@ public class Peoplе {
         return sumMoney;
     }
 
-    public double getSumCredit() {
-        return sumCredit;
-    }
-
     public boolean pay(double payment){
 
         if (sumMoney<payment){
@@ -40,5 +33,8 @@ public class Peoplе {
             sumMoney = sumMoney - payment;
             return true;
         }
+}
+    public void addMoney(double money){
+        sumMoney = sumMoney + money;
     }
 }

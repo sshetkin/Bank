@@ -11,7 +11,6 @@ import java.util.Set;
 public class Colector {
     private List <Credit> listCredit = new ArrayList<>();
     public void buyCredit(Credit credit){
-        credit.getBanks().deletCleent(credit.getPeoplе());
         listCredit.add(credit);
     }
 
