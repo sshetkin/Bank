@@ -19,10 +19,23 @@ public class Peoplе {
 
     }
 
+    public String getNamePeople() {
+        return namePeople;
+    }
+
+    public double getSumMoney() {
+        return sumMoney;
+    }
+
+    public double getSumCredit() {
+        return sumCredit;
+    }
+
     public boolean pay(double payment){
 
         if (sumMoney<payment){
             return false;
+
         }else {
             sumMoney = sumMoney - payment;
             return true;

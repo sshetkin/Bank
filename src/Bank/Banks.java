@@ -14,8 +14,10 @@ public class Banks {
     }
 
     public Boolean giveCredit(Peoplе peoplе){
-
         return false;
+    }
 
+    public void deletCleent(Peoplе peoplе){
+        client.remove(peoplе);
     }
 }
