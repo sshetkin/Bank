@@ -18,4 +18,14 @@ public class Peoplе {
         this.sumCredit = 0;
 
     }
+
+    public boolean pay(double payment){
+
+        if (sumMoney<payment){
+            return false;
+        }else {
+            sumMoney = sumMoney - payment;
+            return true;
+        }
+    }
 }
