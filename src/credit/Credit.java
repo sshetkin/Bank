@@ -27,14 +27,16 @@ public class Credit {
         this.banks = banks;
 
         monthlyPayment = (teloCredit + teloCredit*procent)/countPayment;
-         timer();
+
+        this.peoplе.addDolg(this.banks, monthlyPayment*countPayment);
+        timer();
     }
 
     private void timer(){
         long start = System.currentTimeMillis();
         long end = System.currentTimeMillis();
 
-        while (end - start<1000) {
+        while (end - start<500) {
             end = System.currentTimeMillis();
         }
         getMonthPayment();
@@ -43,6 +45,7 @@ public class Credit {
     private void getMonthPayment(){
         if (peoplе.pay(monthlyPayment)) {
             countPayment --;
+            peoplе.decrisDolg(banks, monthlyPayment);
             if (countPayment > 0){
                 System.out.println("У клиента - "+peoplе.getNamePeople()+" осталось платежей"+ countPayment);
                 timer();

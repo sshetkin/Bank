@@ -41,4 +41,9 @@ public class Banks {
         colector.buyCredit(credit);
         deletCleent(credit.getPeoplе());
     }
+
+    @Override
+    public String toString() {
+        return nameBank;
+    }
 }

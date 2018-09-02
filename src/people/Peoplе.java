@@ -1,8 +1,15 @@
 package people;
 
+import Bank.Banks;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Peoplе {
     private String namePeople;
     private double sumMoney;
+
+    private Map<Banks, Double>dolg = new HashMap<>();
 
     public Peoplе(String namePeople, double sumMoney) {
         this.namePeople = namePeople;
@@ -31,10 +38,27 @@ public class Peoplе {
 
         }else {
             sumMoney = sumMoney - payment;
+
             return true;
         }
 }
     public void addMoney(double money){
         sumMoney = sumMoney + money;
     }
+
+    public void addDolg (Banks banks, double credit){
+        dolg.put(banks, credit);
+    }
+
+    public void decrisDolg (Banks banks, double sumPlateja){
+        Double tDolg = tecDolg(banks);
+        tDolg-=sumPlateja;
+        dolg.put(banks, tDolg);
+        System.out.println("Текущий долг в банке " + banks.toString() + " - " + dolg.get(banks));
+    }
+
+    public double tecDolg (Banks banks){
+        return dolg.get(banks);
+    }
+
 }
