@@ -29,5 +29,7 @@ public class Main {
         lombard.giveCredit(major, 1000.00);
         lombard.giveCredit(sen, 1000.00);
         lombard.giveCredit(kolja, 1000.00);
+
+        colector.printAll();
     }
 }
