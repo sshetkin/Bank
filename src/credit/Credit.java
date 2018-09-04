@@ -47,7 +47,7 @@ public class Credit {
             countPayment --;
             peoplе.decrisDolg(banks, monthlyPayment);
             if (countPayment > 0){
-                System.out.println("У клиента - "+peoplе.getNamePeople()+" осталось платежей"+ countPayment);
+                System.out.println("У клиента - "+peoplе.getNamePeople()+" осталось платежей "+ countPayment);
                 timer();
             }else {
                 System.out.println(peoplе.getNamePeople()+" - выплатил кредит!");

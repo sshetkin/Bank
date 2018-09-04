@@ -18,14 +18,16 @@ public class Colector {
             listCredit.put(credit.getPeoplе(), tDolg);
         }else listCredit.put(credit.getPeoplе(), credit.getPeoplе().tecDolg(credit.getBanks()));
 
-        System.out.println("тек долг клиента - "+credit.getPeoplе().getNamePeople()
-                +" состовляет - "+listCredit.get(credit.getPeoplе()));
+        System.out.printf("Текущий долг клиента - %s составляет - %.2f %n",
+                credit.getPeoplе().getNamePeople(), (double)listCredit.get(credit.getPeoplе()));
+
     }
 
     public void printAll(){
         for (Map.Entry<Peoplе, Double> item : listCredit.entrySet()){
-            System.out.println("тек долг клиента - "+item.getKey().getNamePeople()
-                    +" состовляет - "+item.getValue());
+
+           System.out.printf("Текущий долг клиента - %s составляет - %.2f %n",
+                    item.getKey().getNamePeople(), (double)item.getValue());
         }
 
     }

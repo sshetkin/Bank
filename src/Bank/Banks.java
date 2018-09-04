@@ -25,10 +25,11 @@ public class Banks {
     public Boolean giveCredit(Peoplе peoplе, double sumMoney){
         if (client.add(peoplе)){
             peoplе.addMoney(sumMoney);
+            System.out.println(peoplе.getNamePeople() + " получил кредит в банке "+nameBank+"в размере - "+sumMoney);
             Credit credit = new Credit(sumMoney, procent, countPayment, peoplе, this);
             return true;
         }else {
-            System.out.println(peoplе.getNamePeople() + " в кредите отказано");
+            System.out.printf("%s в кредите отказано %n", peoplе.getNamePeople());
              return false;
         }
     }

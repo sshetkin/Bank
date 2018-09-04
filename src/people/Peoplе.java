@@ -54,7 +54,8 @@ public class Peoplе {
         Double tDolg = tecDolg(banks);
         tDolg-=sumPlateja;
         dolg.put(banks, tDolg);
-        System.out.println("Текущий долг в банке " + banks.toString() + " - " + dolg.get(banks));
+        System.out.printf("Текущий долг %s в банке - %s составляет - %.2f %n",
+                namePeople, banks.toString(), (double)dolg.get(banks));
     }
 
     public double tecDolg (Banks banks){
