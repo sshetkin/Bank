@@ -31,5 +31,6 @@ public class Main {
         lombard.giveCredit(kolja, 1000.00);
 
         colector.printAll();
+        //end
     }
 }
